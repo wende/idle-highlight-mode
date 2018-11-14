@@ -90,7 +90,7 @@
                    (not (in-string-p))
                    (looking-at-p "\\s_\\|\\sw") ;; Symbol characters
                    (not (member target idle-highlight-exceptions)))
-          (setq idle-highlight-regexp (concat "\\<" (regexp-quote target) "\\>"))
+          (setq idle-highlight-regexp (regexp-quote target))
           (highlight-regexp idle-highlight-regexp 'idle-highlight)))))
 
 (defsubst idle-highlight-unhighlight ()
